@@ -1,7 +1,7 @@
 Happy 4th of July!
 =================
 
-Just a simple Pixi experiment. Click to shoot fireworks!
+Just a simple Pixi experiment. Click/tap to shoot fireworks!
 
 
 The Future
