@@ -1,4 +1,5 @@
 const canvas = document.getElementById("stage");
+const ftue = document.querySelector('.ftue')
 
 const getRandomInt = (min, max) =>{
     min = Math.ceil(min);
@@ -115,7 +116,8 @@ class Stage{
       this.renderer.render(this.stage);
     };
   
-    setClickHandler(){        
+    setClickHandler(){
+      ftue.style.opacity = 1
       canvas.addEventListener('mousedown', (e)=>{
        this.onClick(e)
       });
@@ -126,7 +128,8 @@ class Stage{
   
     onClick(e){
       let clickPos = {x:e.offsetX || e.layerX, y:e.offsetY || e.layerY}
-      
+      if(this.totalFireworks === 0){ftue.style.opacity = 0}
+
       let firework = new Fireworks(this.stage,this.art,this.config,clickPos)
       this.fireworks.push(firework)
       this.totalFireworks += 1
